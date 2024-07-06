@@ -356,6 +356,7 @@ class Button():
         if self.default_data[self.name+'Display'] == 'both':   
             img = Image.open(self.default_data[self.name+'IconOn'])
             resized_image= img.resize((20,20), Image.ANTIALIAS)
+            # change to Image.LANCZOS for Pillow > 10
             self.icon_on = ImageTk.PhotoImage(resized_image)
             img = Image.open(self.default_data[self.name+'IconOff'])
             resized_image= img.resize((20,20), Image.ANTIALIAS)
